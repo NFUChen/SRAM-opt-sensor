@@ -1,0 +1,12 @@
+[Unit]
+Description = Production display board signal outputter for photodetector and driver sensor
+After = multi-user.target
+
+[Service]
+WorkingDirectory = /home/pi/signal_outputter
+User = pi
+ExecStart = python3 /home/pi/signal_outputter/main.py
+Restart = on-failure
+
+[Install]
+WantedBy = multi-user.target
